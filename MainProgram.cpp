@@ -137,7 +137,7 @@ public:
     void transfer(BankAccount& other, double amount) {
         // TODO: Implement using withdraw() and deposit()
         if (amount <= 0){
-            throw runtime_error("Transfer amount be positive");
+            throw invalid_argument("Transfer amount be positive");
         }
         withdraw(amount);
         other.deposit(amount);
